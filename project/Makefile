@@ -1,6 +1,8 @@
 FRONT_END_BINARY=frontApp
 BROKER_BINARY=brokerApp
 
+# changed all docker-compose to docker compose since docker is not supporting that anymore
+
 ## up: starts all containers in the background without forcing build
 up:
 	@echo "Starting Docker images..."
