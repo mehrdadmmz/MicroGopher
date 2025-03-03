@@ -16,22 +16,22 @@ services:
 
   authentication-service: 
     build:
-      context: ./../authentication-service
-      dockerfile: ./../authentication-service.dockerfile
+      context: ../authentication-service
+      dockerfile: ./authentication-service.dockerfile
     restart: always
     ports: 
       - "8081:80"
     deploy:
       mode: replicated
-      replica: 1
+      replicas: 1
     environment: 
       DSN: "host=postgres port=5432 user=postgres password=password dbname=users sslmode=disable timezone=UTC connect_timeout=5"  
 
 
   postgres:
-    image: "14.2"   
+    image: "postgres:14.2"   
     ports: 
-      - "5432:5432"
+      - "5433:5432"
     restart: always
     deploy: 
       mode: replicated
