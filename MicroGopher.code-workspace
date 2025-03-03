@@ -13,5 +13,7 @@
 			"path": "project"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"MATLAB.installPath": "'/Applications/MATLAB_R2024b.app'"
+	}
 }
